@@ -1,4 +1,7 @@
-FROM php:7.1.3-fpm
+# Docker file to build a CentOS LAMP Stack
+# CentOS 7 and Apache 2.4, PHP 5.6
+
+FROM centos:7
 
 MAINTAINER Mwalima Peltenburg <m.peltenburg@hotmail.com>
 

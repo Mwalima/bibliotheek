@@ -20,9 +20,7 @@ Route::get('/boektoevoegen',function(){
 });
 
 
-Route::get('/boekoverzicht',function(){
-    return view('boekoverzicht');
-});
+Route::get('/boekoverzicht','BoekController@getBoeken');
 
 Route::get('users', function()
 {

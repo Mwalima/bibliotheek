@@ -8,12 +8,12 @@ services:
     expose:
       - 9000
     ports:
-      - 8080:80
+      - 8084:80
       - 443:443
     volumes:
-      - /var/www/html/bibliotheek/public/
+      - /var/www/html/bibliotheek/
     links:
-      - mysql_acato
+      - mysql
 
   mysql:
       build: builds/mysql

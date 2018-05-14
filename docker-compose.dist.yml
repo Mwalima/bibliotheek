@@ -1,0 +1,35 @@
+version: '2'
+
+services:
+  httpd:
+    build: builds/httpd
+    container_name: lynda-httpd
+    privileged: true
+    expose:
+      - 9000
+    ports:
+      - 8084:80
+      - 443:443
+    volumes:
+      - /home/mwalima/workspace/php_Lynda_cursus:/var/www/html
+    links:
+      - mysql
+
+  mysql:
+      build: builds/mysql
+      container_name: lynda-mysql
+      ports:
+        - 3306:3306
+      environment:
+        - MYSQL_ROOT_PASSWORD=qwerty
+      volumes:
+        - /home/mwalima/workspace/_mysql:/var/lib/mysql
+
+  selenium:
+      build: builds/selenium
+      image: selenium/standalone-chrome
+      container_name: lynda-selenium
+      extra_hosts:
+        - "lynda.docker:192.168.2.10"
+      volumes_from:
+        - httpd

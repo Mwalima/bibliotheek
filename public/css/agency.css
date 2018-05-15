@@ -6,6 +6,7 @@
 body {
   overflow-x: hidden;
   font-family: 'Roboto Slab', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: #523c3c;
 }
 
 p {
@@ -172,7 +173,7 @@ img::-moz-selection {
 header.masthead {
   text-align: center;
   color: white;
-  background-image: url("../img/Dagmar3-1024x724.jpg");
+  background-image: url("../img/header-bg.jpg");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
@@ -201,6 +202,7 @@ header.masthead .intro-text .intro-heading {
   line-height: 50px;
   margin-bottom: 25px;
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color:darkred;
 }
 
 @media (min-width: 768px) {
@@ -221,6 +223,7 @@ header.masthead .intro-text .intro-heading {
     line-height: 75px;
     margin-bottom: 50px;
     font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color:darkred;
   }
 }
 

@@ -13,7 +13,14 @@ class Boek extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('boek', function (Blueprint $table) {
+            $table->string('afbeelding');
+            $table->string('auteur');
+            $table->string('titel');
+            $table->string('omschrijving');
+            $table->timestamp('updated_at')->nullable();
+            $table->timestamp('created_at')->nullable();
+        });
     }
 
     /**

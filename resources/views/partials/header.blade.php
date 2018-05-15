@@ -4,7 +4,8 @@
         <div class="intro-text">
             <div class="intro-lead-in">Welkom bij onze Bibliotheek</div>
             <div class="intro-heading text-uppercase">Fijn om je weer te zien</div>
-            <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="/boekoverzicht">boek overzicht</a>
+            <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="/login">inloggen</a>
+            {{--<a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="/boektoevoegen">boek toevoegen</a>--}}
         </div>
     </div>
 </header>

@@ -48,10 +48,10 @@ RUN groupadd -r www-data && useradd -r -u 1000 --create-home -g www-data www-dat
 RUN yum -y install php56w php56w-common php56w-cli
 
 # Install PHP 5.6 extensions
-#RUN yum -y install php56w-mbstring php56w-curl php56w-ldap php56w-xml \
-#                   php56w-gd php56w-intl php56w-mcrypt php56w-devel \
-#                   php56w-pear php56w-pecl-apcu php56w-pecl-xdebug \
-#                   php56w-mysql php56w-mssql php56w-pdo php56w-odbc php56w-soap
+RUN yum -y install php56w-mbstring php56w-curl php56w-ldap php56w-xml \
+                   php56w-gd php56w-intl php56w-mcrypt php56w-devel \
+                   php56w-pear php56w-pecl-apcu php56w-pecl-xdebug \
+                   php56w-mysql php56w-mssql php56w-pdo php56w-odbc php56w-soap
 
 # Install Node.js & NPM
 RUN yum -y install nodejs npm

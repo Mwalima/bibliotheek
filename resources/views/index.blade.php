@@ -6,6 +6,7 @@
 <!-- Header -->
 <header class="masthead">
     @include('partials.header')
+    @include('partials.nav')
 </header>
 <body>
 </body>

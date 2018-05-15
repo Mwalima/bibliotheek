@@ -18,11 +18,21 @@ Route::get('/', function () {
 Route::get('/boektoevoegen',function(){
     return view('boektoevoegen');
 });
+Route::post('/boektoevoegen',['as'=>'insertboek.store', 'uses'=>'BoekController@insertBoeken']);
+
 
 
 Route::get('/boekoverzicht','BoekController@getBoeken');
 
-Route::get('users', function()
-{
-    return 'Users!';
-});
+
+// route to show the login form
+Route::get('login', array('uses' => 'UserController@showLogin'));
+
+// route to process the form
+Route::post('login', array('uses' => 'UserController@doLogin'));;
+
+Route::get('logout', array('uses' => 'UserController@doLogout'));
+
+Auth::routes();
+
+//Route::get('/home', 'HomeController@index')->name('boektoevoegen');

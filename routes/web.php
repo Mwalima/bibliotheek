@@ -15,24 +15,17 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/boektoevoegen',function(){
+Route::get('/boektoevoegen', function () {
     return view('boektoevoegen');
 });
-Route::post('/boektoevoegen',['as'=>'insertboek.store', 'uses'=>'BoekController@insertBoeken']);
+Route::post('/boektoevoegen', ['as' => 'insertboek.store', 'uses' => 'BoekController@insertBoeken'])->middleware('auth');
 
+Route::get('/boekoverzicht', 'BoekController@getBoeken')->middleware('auth');
 
-
-Route::get('/boekoverzicht','BoekController@getBoeken');
-
-
-// route to show the login form
 Route::get('login', array('uses' => 'UserController@showLogin'));
-
-// route to process the form
-Route::post('login', array('uses' => 'UserController@doLogin'));;
 
 Route::get('logout', array('uses' => 'UserController@doLogout'));
 
 Auth::routes();
 
-//Route::get('/home', 'HomeController@index')->name('boektoevoegen');
+Route::get('/home', 'HomeController@index')->name('boektoevoegen');

@@ -1,11 +1,13 @@
+<!doctype html>
+<html>
 <head>
     @include('partials.head')
 </head>
 <header>
-    @include('partials.nav')
+    @include('partials.header2')
 </header>
+@include('partials.nav')
 <body>
 @include('partials.insertboek_form')
-
 </body>
 </html>

@@ -1,6 +1,4 @@
-<h2>Registred Users Area</h2>
 <div class="container">
-
     {!! Form::open(['route'=>'insertboek.store']) !!}
 
     <div class="form-group {{ $errors->has('auteur') ? 'has-error' : '' }}">
@@ -28,12 +26,6 @@
             {{Form::submit('Save', ['class' => 'btn btn-success'])}}
             <span class="text-danger">{{ $errors->first('save') }}</span>
         </div>
-
     {!! Form::close() !!}
-
-    <div class="form-group">
-        <button class="btn btn-success"><a href="{{ URL::to('logout') }}">Logout</a></button>
-    </div>
-
     </div>
 </div>

@@ -17,10 +17,10 @@ class CreateUsersTable extends Migration
         {
             $table->increments('id');
 
-            $table->string('name', 32);
-            $table->string('username', 32);
-            $table->string('email', 320);
-            $table->string('password', 64);
+            $table->string('name', 32)->nullable();
+            $table->string('username', 32)->nullable();
+            $table->string('email', 320)->nullable();
+            $table->string('password', 64)->nullable();
 
             // required for Laravel 4.1.26
             $table->string('remember_token', 100)->nullable();

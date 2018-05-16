@@ -9,5 +9,8 @@
 @include('partials.nav')
 <body>
 @include('partials.insertboek_form')
+<div>
+    @include('partials.footer')
+</div>
 </body>
 </html>

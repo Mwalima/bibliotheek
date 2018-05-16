@@ -11,8 +11,20 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav text-uppercase ml-auto">
                 <li class="nav-item">
-                <li><a href="{{ route('login') }}">Login</a></li>
-                <li><a href="{{ route('register') }}">Register</a></li>
+                    <a class="nav-link js-scroll-trigger" href="/boektoevoegen">Boek Toevoegen</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="/boekoverzicht">Boek Overzicht</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="{{ route('login') }}">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="{{ route('register') }}">Register</a>
+                </li>
+                <li class="nav-item">
+
+                    <a class="nav-link js-scroll-trigger" href="{{ URL::to('logout') }}">Logout</a>
                 </li>
             </ul>
         </div>

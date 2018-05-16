@@ -1,7 +1,9 @@
 // Styling for the masthead
 header.masthead {
   text-align: center;
-  color: white;
+  color: royalblue;
+  font-size: large;
+  font-style:oblique;
   background-image: url('../img/header-bg.jpg');
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -26,6 +28,7 @@ header.masthead {
     }
   }
 }
+
 @media(min-width:768px) {
   header.masthead {
     .intro-text {

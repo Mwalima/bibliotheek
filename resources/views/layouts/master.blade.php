@@ -43,15 +43,6 @@
                 <li class="nav-item">
                     <a class="nav-link js-scroll-trigger" href="/boekoverzicht">Boek Overzicht</a>
                 </li>
-                <!--<li class="nav-item">-->
-                <!--<a class="nav-link js-scroll-trigger" href="#about">Over ons</a>-->
-                <!--</li>-->
-                <!--<li class="nav-item">-->
-                <!--<a class="nav-link js-scroll-trigger" href="#team">Team</a>-->
-                <!--</li>-->
-                <!--<li class="nav-item">-->
-                <!--<a class="nav-link js-scroll-trigger" href="#contact">Contact</a>-->
-                <!--</li>-->
             </ul>
         </div>
     </div>

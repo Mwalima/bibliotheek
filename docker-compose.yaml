@@ -1,0 +1,42 @@
+version: '2'
+services:
+
+  # The Application
+  app:
+    build:
+      context: ./
+      dockerfile: acato_app.dockerfile
+    working_dir: /var/www/html/bibliotheek/
+    volumes:
+      - ./:/var/www/html
+    environment:
+      - "DB_PORT=3306"
+      - "DB_HOST=mysql"
+
+  # The Web Server
+  web:
+    build:
+      context: ./
+      dockerfile: web.dockerfile
+    working_dir: /var/www/html/bibliotheek/
+    volumes_from:
+      - app
+    ports:
+      - 8000:80
+    links:
+      - mysql
+#the database
+  mysql:
+      build: builds/mysql
+      container_name: mysql
+      ports:
+        - 3307:3307
+      environment:
+        - MYSQL_ROOT_PASSWORD=qwerty
+      volumes:
+        - /Documents/workspace/Acato/_mysql:/var/lib/mysql
+#the debugger
+  cache:
+      image: redis:3.0
+      ports:
+        - "63791:6379"

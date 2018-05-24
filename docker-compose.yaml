@@ -5,12 +5,12 @@ services:
   app:
     build:
       context: ./
-      dockerfile: app.dockerfile
-    working_dir: /var/www/html
+      dockerfile: acato_app.dockerfile
+    working_dir: /var/www/html/
     volumes:
       - ./:/var/www/html
     environment:
-      - "DB_PORT=3307"
+      - "DB_PORT=3306"
       - "DB_HOST=mysql"
 
   # The Web Server
@@ -18,7 +18,7 @@ services:
     build:
       context: ./
       dockerfile: web.dockerfile
-    working_dir: /var/www/html
+    working_dir: /var/www/html/
     volumes_from:
       - app
     ports:
@@ -34,7 +34,7 @@ services:
       environment:
         - MYSQL_ROOT_PASSWORD=qwerty
       volumes:
-        - /var/www/html/_mysql:/var/lib/mysql
+        - /Documents/workspace/Acato/_mysql:/var/lib/mysql
 #the debugger
   cache:
       image: redis:3.0

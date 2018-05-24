@@ -23,7 +23,7 @@
                             <div class="card">
                                 <div class="card-body">
                                     <img class="card-img-top" src="img/{{$boek->afbeelding}}" alt="Card image cap">
-                                    <h5 class="card-title">Titel: {{$boek->auteur}}</p></li>
+                                    <h5 class="card-title">Auteur: {{$boek->auteur}}</p></li>
                                         <li><p class="item-intro text-muted">Omschrijving: {{$boek->titel}}</p></li>
                                     </h5>
                                     <p class="card-text">

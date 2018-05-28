@@ -1,0 +1,39 @@
+version: '2'
+
+services:
+  httpd:
+    build: builds/httpd
+    container_name: acato-httpd
+    privileged: true
+    expose:
+      - 9000
+    ports:
+      - 8084:80
+      - 443:443
+    volumes:
+      - /var/www/html/bibliotheek/
+    links:
+      - mysql
+
+  mysql:
+      build: builds/mysql
+      container_name: acato-mysql
+      ports:
+        - 3307:3307
+      environment:
+        - MYSQL_ROOT_PASSWORD=qwerty
+      volumes:
+        - /home/mpthuispc/Documents/workspace/Acato/_mysql:/var/lib/mysql
+
+  selenium:
+      build: builds/selenium
+      image: selenium/standalone-chrome
+      container_name: acato-selenium
+      extra_hosts:
+        - "acato-httpd:192.168.2.10"
+      volumes_from:
+        - httpd
+  cache:
+      image: redis:3.0
+      ports:
+        - "63791:6379"
